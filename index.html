@@ -10,12 +10,39 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="D:\Workspace\Bootstrap4\conFusion\styles.css">
+    <link rel="stylesheet" href="E:\Coursera\Bootstrap\conFusion\conFusion\styles.css">
+</head>
         
 <body>
+    <nav class = "navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class = "container">
+            <!-- Button to expand navbar on small devices -->
+            <!-- #Navbar refers to the id of following element -->
+            <button class ="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navbar items in a list with the logo being on navbar-brand -->
+            <!-- active class applied on current webpage which bootstrap highlights-->
+
+            <a class = "navbar-brand mr-auto" href="#">Ristorante con Fusion</a>
+
+            <div class = "collapse navbar-collapse" id = "Navbar">
+                <ul class = "navbar-nav mr-auto">                
+                    <li class = "nav-item active"><a class = "nav-link" href = "#">Home</a></li>
+                    <li class = "nav-item"><a class = "nav-link" href = ".\aboutus.html">About</a></li>
+                    <li class = "nav-item"><a class = "nav-link" href = "#">Menu</a></li>
+                    <li class = "nav-item"><a class = "nav-link" href = "#">Contact</a></li>
+                </ul>            
+            </div>
+    </nav>
+
+    <!-- Jumbotron is the slightly different colored top part-->
+    
 
     <header class = "jumbotron">
         <div class = "container">
+            <!-- Adding rows with the bootstrap grid system-->
             <div class = "row row-header">
                 <div class = "col-12 col-sm-6">
                     <h1>Ristorante con Fusion</h1>
@@ -28,6 +55,7 @@
     </header>
 
     <div class = "container">
+        <!-- Adding rows with the bootstrap grid system-->
         <div class = "row row-content align-items-center">
             <div class = "col-12 col-sm-4 col-md-3 order-sm-last">
                 <h3>Our Lipsmacking Culinary Creations</h3>
@@ -67,8 +95,8 @@
                 <div class = "col-4 col-sm-2 offset-1">
                     <h5>Links</h5>
                     <ul class = "list-unstyled">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href=".\index.html">Home</a></li>
+                        <li><a href=".\aboutus.html">About</a></li>
                         <li><a href="#">Menu</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
