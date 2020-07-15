@@ -9,10 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href=".\node_modules\font-awesome\css\font-awesome.min.css">
     <link rel="stylesheet" href=".\node_modules\bootstrap-social\bootstrap-social.css">
-    <link rel="stylesheet" href="E:\Coursera\Bootstrap\conFusion\conFusion\styles.css">
+    <link rel="stylesheet" href=".\styles.css">
     
 </head>
         
@@ -35,14 +35,14 @@
             <!-- fa class is for all font awesome items-->        
             <!-- font-awesome classes should preferably be applied to either <span> or <i> elements-->
             <!-- fa-lg class is for slightly larger icons-->            
-            <a class = "navbar-brand mr-auto" href="#">Ristorante con Fusion</a>
+            <a class="navbar-brand" href=".\index.html"><img src=".\img\logo.png" height="30" width="41"></a>
 
             <div class = "collapse navbar-collapse" id = "Navbar">
                 <ul class = "navbar-nav mr-auto">                
-                    <li class = "nav-item active"><a class = "nav-link" href = ".\index.html"><span class="fa fa-home"></span> Home</a></li>
-                    <li class = "nav-item "><a class = "nav-link" href = ".\aboutus.html"><span class="fa fa-info"></span> About Us</a></li>
-                    <li class = "nav-item"><a class = "nav-link" href = ".\contactus.html"><span class="fa fa-list fa-lg"></span> Menu</a></li>
-                    <li class = "nav-item"><a class = "nav-link" href = "#"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+                    <li class = "nav-item active"><a class = "nav-link" href = ".\index.html"> <span class="fa fa-home fa-lg"></span> Home</a></li>
+                    <li class = "nav-item "><a class = "nav-link" href = ".\aboutus.html"><span class="fa fa-info fa-lg"></span> About Us</a></li>
+                    <li class = "nav-item"><a class = "nav-link" href = "#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
+                    <li class = "nav-item"><a class = "nav-link" href = ".\contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>            
             </div>
     </nav>
@@ -58,7 +58,11 @@
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class = "col-12 col-sm">
+                <div class = "col-12 col-sm-3 align-self-center">
+                    <img src =".\img\logo.png" class="img-fluid">
+                </div>
+                <div class="col-12 col-sm-3 align-self-center">
+                    <a href="#reserveTable"><span class="btn btn-warning col-12"> Reserve Table </span></a>
                 </div>
             </div>
         </div>
@@ -71,8 +75,25 @@
                 <h3>Our Lipsmacking Culinary Creations</h3>
             </div>
             <div class = "col col-sm col-md order-sm-first">
-                <h2>Uthappizza</h2>
-                <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+                <div class="media">
+                    <img class="d-flex mr-3 img-thumbnail align-self-center" 
+                        src =".\img\uthappizza.png" alt="uthappizza">
+                    
+                    <div class = "media-body">
+                        <h2 class="mt-0">
+                            Uthappizza
+                            <span class="badge badge-danger">HOT</span>
+                            <span class="badge badge-pill badge-secondary">$4.99</span>
+                        </h2>
+                        <div class="d-none d-sm-block">
+                            <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, 
+                                topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+
+                        </div>                        
+                        
+                    </div>                    
+                </div>
+                
             </div>
         </div>
 
@@ -81,9 +102,25 @@
             <div class = "col-12 col-sm-4 col-md-3">
                 <h3>This Month's Promotions</h3>
             </div>
-            <div class = "col col-sm col-md">
-                <h2>Weekend Grand Buffet</h2>
-                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+            <div class = "d-inline-flex col col-sm-8 col-md-9">
+                <div class="media">
+                    <img src=".\img\buffet.png" class="d-inline-flex ml-3 img-thumbnail inline-block order-sm-last" alt="buffet">
+                    <div class="media-body">
+                        <h2 class="mt-0">
+                            Weekend Grand Buffet
+                            <span class="badge badge-danger">NEW</span>                        
+                        </h2>
+                        <div class="d-none d-sm-block">
+                            <p>Featuring mouthwatering combinations with a choice of five different salads, 
+                            six enticing appetizers, six main entrees and five choicest 
+                            desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                        </div>                    
+                        
+                        
+                    </div>                    
+                </div>
+                
+                
             </div>
         </div>
 
@@ -92,11 +129,125 @@
                 <h3>Meet our Culinary Specialists</h3>
             </div>
             <div class = "col col-sm col-md order-sm-first">
-                <h2>Alberto Somayya</h2>
-                <h4>Executive Chef</h4>
-                <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
-            </div>
+                <div class="media">
+                    <img class = "d-flex mr-3 align-self-center img-thumbnail" 
+                        src =".\img\alberto.png" alt="alberto">                
+                   
+                    <div class="media-body">
+                        <h2>Alberto Somayya</h2>
+                        <h4>Executive Chef</h4>
+                        <div class="d-none d-sm-block">
+                            <p>Award winning three-star Michelin chef with wide International 
+                                experience having worked closely with whos-who in the culinary world, 
+                                he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                        </div>
+                        
+                    </div>
+                </div>                
+
+            </div>         
+                                        
         </div>
+
+        <div class="row row-content "id ="reserveTable">
+            <div class="col-sm-8 offset-sm-2">
+                <div class="card" >
+                    <h3 class="ml-0 card-header bg-warning text-white">
+                    Reserve a Table
+                    </h3>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-2 col-12">Number of Guests</div>
+                            <div class="col-sm-10">
+                                <form>
+                                    <div class="form-check form-check-inline radio-inline ">
+                                        <!-- Use type="radio" for round checkboxes where only one out of the options with the same name="" can we be selected-->
+                                        <input type ="radio" class="form-check-input" id="guestcount1" name="guestcount">
+                                        <label class="form-check-label  " for ="guestcount1">1 </label>                            
+                                        <input type ="radio" class="form-check-input   " id="guestcount2" name="guestcount" checked>
+                                        <label class="form-check-label  " for ="guestcount2">2 </label>                                
+                                        <input type ="radio" class="form-check-input" id="guestcount3" name="guestcount">
+                                        <label class="form-check-label  " for ="guestcount3">3 </label>                                
+                                        <input type ="radio" class="form-check-input" id="guestcount4" name="guestcount">
+                                        <label class="form-check-label  " for ="guestcount4">4 </label>                                
+                                        <input type ="radio" class="form-check-input" id="guestcount5" name="guestcount">
+                                        <label class="form-check-label  " for ="guestcount5">5 </label>                               
+                                        <input type ="radio" class = "form-check-input" id="guestcount6" name="guestcount">
+                                        <label class="form-check-label  " for ="guestcount6">6 </label>
+                                    </div>
+                                </form>
+
+                                
+                                
+                                <!-- <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                      Default radio
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                      Second default radio
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+                                    <label class="form-check-label" for="exampleRadios3">
+                                      Disabled radio
+                                    </label>
+                                  </div> -->
+                                
+                                <!-- <p style="padding:1px"></p> 
+                                <label class="radio-inline">
+                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1 
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2 
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3 
+                                </label>
+                                <label class="radio-inline">
+                                   <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4"> 4 
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5"> 5 
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6"> 6 
+                                </label> -->
+                            </div>                     
+                                             
+
+                        </div>                             
+                                
+                    
+                       
+                        <div class="form-group row">
+                            <label for="" class="col-form-label col-sm-2 col-12">
+                                Date and Time    
+                            </label>
+                            <div class="col-12 col-sm-4">
+                                <input type = "text" class="form-control" id="date" name="date" 
+                                    value="" placeholder="Date">
+                            </div>
+                            <div class="col-12 col-sm-4">
+                                <input type="text" name="time" id="time" class="form-control"
+                                    value="" placeholder="Time">
+                            </div>
+                    </div>
+                    <div class="offset-sm-2">
+                        <span class= "btn btn-primary text-white">Reserve</span>
+                    </div>
+                    
+                </div>
+            </div>
+            </div>
+
+        </div>
+
+
     </div>
 
     <footer class ="footer">
@@ -107,8 +258,8 @@
                     <ul class = "list-unstyled">
                         <li><a href=".\index.html">Home</a></li>
                         <li><a href=".\aboutus.html">About</a></li>
-                        <li><a href=".\contactus.html">Menu</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href=".\contactus.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class = "col-7 col-sm-5 adress">
@@ -143,9 +294,9 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 
 </html>
