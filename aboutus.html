@@ -130,7 +130,7 @@
                 <!--Set role="tab" and data-toggle="tab" to each of the links and class="nav-item" to each list item-->
                 <!--Set the href ="#id" of the div that you want to toggle with that particular link-->
 
-                <ul class="nav nav-tabs">
+                <!-- <ul class="nav nav-tabs">
                     <li class="nav-item">
                         <a class="nav-link active" href="#Peter" role="tab" data-toggle="tab">Peter Pan, CEO</a>
                     </li>
@@ -143,13 +143,14 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#Alberto" role="tab" data-toggle="tab">Alberto Somayya, Executive Chef</a>
                     </li>
-                </ul>
+                </ul> -->
 
                 <!-- Enclose all the content to be accessed using tabs inside a div with the "tab-content" class-->
                 <!-- Each of the indivisual tabs' content should be in a div with role="tabpanel" the "tab-pane" class applied-->
                 <!-- Check the id for the link on the tabpanels-->
-                <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane show active" id ="Peter">
+                <!--"fade" class for a fade in animation when switching tabs-->
+                <!-- <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane show active fade" id ="Peter">
                         <h3>Peter Pan <small>Chief Epicurious Officer</small></h3>
                         <p class = "d-none d-sm-block" >Our CEO, Peter, credits his hardworking East Asian immigrant parents who undertook the arduous journey to the shores of America with the intention of giving their children the best future. His mother's wizardy in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the supermarket, was his first inspiration to create the fusion cuisines for which <em>The Frying Pan</em> became well known. He brings his zeal for fusion cuisines to this restaurant, pioneering cross-cultural culinary connections.</p>
                     </div>
@@ -165,13 +166,86 @@
                         <h3>Alberto Somayya <small>Executive Chef</small></h3>
                         <p class = "d-none d-sm-block" >Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, <em>Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!</em></p>
                     </div>
-                </div>
-
+                </div> -->
                 
+                <!--COLLAPSE AND ACCORDION BEHAVIOUR
+                    To trigger a collapse behavious add "collapse" class to the content that needs to be collapsed and a data-toggle="collapse" to
+                    the link which toggles the collapse behaviour
+                    Adding a data-parent will make it so that only one of the "tabpanel"s with the same data-parent can be opened within the data-parent
+                -->
+                <div id="CorporateLeaders">
+                    <div class="card">
+                        <div class="card-header" role="tab" id="PeterHead">
+                            <h3 class="mb-0">
+                                <a data-toggle="collapse" data-target="#Peter">
+                                    Peter Pan <small>Chief Epicurious Officer</small>
+                                </a>
+                            </h3>
+                        </div>
+                        <div role="tabpanel" class="collapse show" id ="Peter" data-parent="#CorporateLeaders">                        
+                            <div class="card-body">
+                                <p class = "d-none d-sm-block" >Our CEO, Peter, credits his hardworking East Asian immigrant parents who 
+                                undertook the arduous journey to the shores of America with the intention of giving their children the best future. His mother's 
+                                wizardy in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the supermarket, was his first
+                                inspiration to create the fusion cuisines for which <em>The Frying Pan</em> became well known. He brings his zeal for fusion 
+                                cuisines to this restaurant, pioneering cross-cultural culinary connections.</p>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="DannyHead">
+                            <h3 class="mb-0">
+                                <a data-toggle="collapse" data-target="#Danny">
+                                    Dhanasekaran Witherspoon <small>Chief Food Officer</small>
+                                </a>
+                            </h3>                            
+                        </div>
+                        <div role="tabpanel" class="collapse" id ="Danny" data-parent="#CorporateLeaders">
+                            <div class="card-body">
+                                <p class = "d-none d-sm-block" >Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established 
+                                    family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great 
+                                    appreciation for varieties of food sources. As he puts it in his own words, <em>Everything that runs, wins, and everything 
+                                    that stays, pays!</em></p>                        
+                            </div>                        
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="mb-0">
+                                <a data-toggle="collapse" data-target="#Agumbe">
+                                    Agumbe Tang <small>Chief Taste Officer</small>
+                                </a>
+                            </h3>
+                        </div>
+                        <div role="tabpanel" class="collapse" id="Agumbe" data-parent="#CorporateLeaders">
+                            <div class="card-body">
+                                <p class = "d-none d-sm-block" >Blessed with the most discerning gustatory sense, Agumbe, our CTO, personally ensures that every 
+                                    dish that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish does not meet his 
+                                    exacting standards. He lives by his motto, <em>You click only if you survive my lick.</em></p>                        
+                            </div>
+                        </div>                       
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="mb-0">
+                                <a data-toggle="collapse" data-target="#Alberto">
+                                    Alberto Somayya <small>Executive Chef</small>
+                                </a>
+                            </h3>
+                        </div>
+                        <div role = "tabpanel" class="collapse" id="Alberto" data-parent="#CorporateLeaders">
+                            <div class="card-body">
+                                <p class = "d-none d-sm-block" >Award winning three-star Michelin chef with wide International experience having worked closely with 
+                                    whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, 
+                                    <em>Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!</em></p>                    
+                            </div>
+                        </div>                            
+                    </div>                
+                </div>
             </div>
-       </div>
+        </div>
 
-       <div class ="row row-content">
+        <div class ="row row-content">
            <div class= "col-12 col-sm-9">
                <h2>Facts &amp; Figures</h2>
                <div class="table-responsive">
